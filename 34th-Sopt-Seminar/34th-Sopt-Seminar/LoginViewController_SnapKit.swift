@@ -1,17 +1,18 @@
 //
-//  LoginViewController.swift
+//  LoginViewController_SnapKit.swift
 //  34th-Sopt-Seminar
 //
-//  Created by  정지원 on 2024/03/30.
+//  Created by  정지원 on 2024/04/19.
 //
 
 import Foundation
 import UIKit
 import SnapKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController_SnapKit: UIViewController {
+    
     private let titleLabel: UILabel = {
-        let label = UILabel(frame: CGRect(x: 69, y: 161, width: 236, height: 44))
+        let label = UILabel()
         label.text = "동네라서 가능한 모든것\n당근에서 가까운 이웃과 함께해요."
         label.textColor = .black
         label.textAlignment = .center
@@ -21,22 +22,18 @@ class LoginViewController: UIViewController {
     }()
     
     private let idTextField: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 20, y: 276, width: 335, height: 52))
+        let textField = UITextField()
         textField.placeholder = "아이디를 입력해주세요"
-        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
-        textField.clearButtonMode = .whileEditing //전체 삭제 버튼 생성
-        textField.layer.cornerRadius = 3 //모서리 둥글게
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
     }()
     
     private let passwordTextField: UITextField = {
-        let textField = UITextField(frame: CGRect(x: 20, y: 335, width: 335, height: 52))
+        let textField = UITextField()
         textField.placeholder = "비밀번호를 입력해주세요"
-        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
-        textField.clearButtonMode = .whileEditing //전체 삭제 버튼 생성
-        textField.layer.cornerRadius = 3 //모서리 둥글게
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
     }()
     
@@ -53,26 +50,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach{self.view.addSubview($0)}
         
-        titleLabel.snp.makeConstraints {
-                $0.centerX.equalToSuperview()
-                $0.top.equalToSuperview().offset(161)
-            }
-            
-        loginButton.snp.makeConstraints {
-                $0.top.equalToSuperview().offset(217)
-                $0.leading.equalToSuperview().inset(20)
-                $0.trailing.equalToSuperview().inset(20)
-                $0.height.equalTo(58)
-            }
+        self.view.backgroundColor = .white
+        setLayout()
     }
     
     @objc func loginButtonDidTap() {
 //        pushToWelcomeVC()
         presentToWelcomeVC()
-    } //눌렀을 때 어떤 액션 취할건지 선언
+    }
     
     private func presentToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
@@ -85,5 +71,36 @@ class LoginViewController: UIViewController {
         let welcomeViewController = WelcomeViewController()
         self.navigationController?
             .pushViewController(welcomeViewController, animated: true)
+    }
+    
+    private func setLayout() {
+        [titleLabel, idTextField, passwordTextField, loginButton].forEach {
+            self.view.addSubview($0)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(161)
+            make.width.equalTo(236)
+            make.height.equalTo(44)
+        }
+        
+        idTextField.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(71)
+            make.left.right.equalToSuperview().inset(20)
+            make.height.equalTo(52)
+        }
+        
+        passwordTextField.snp.makeConstraints { make in
+            make.top.equalTo(idTextField.snp.bottom).offset(7)
+            make.left.right.equalTo(idTextField)
+            make.height.equalTo(52)
+        }
+        
+        loginButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(35)
+            make.left.right.equalTo(idTextField)
+            make.height.equalTo(58)
+        }
     }
 }
