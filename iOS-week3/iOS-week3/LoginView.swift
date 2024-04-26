@@ -1,12 +1,5 @@
 //
-//  WelcomeViewController_SnapKit.swift
-//  34th-Sopt-Seminar
-//
-//  Created by  정지원 on 2024/04/19.
-//
-
-//
-//  LoginViewController_SnapKit.swift
+//  LoginView.swift
 //  iOS-week3
 //
 //  Created by  정지원 on 2024/04/20.
@@ -15,7 +8,18 @@
 import UIKit
 import SnapKit
 
-final class LoginViewController: UIViewController {
+final class LoginView: UIView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setLayout()
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -43,65 +47,73 @@ final class LoginViewController: UIViewController {
         return textField
     }()
     
-    private lazy var loginButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(red: 255/255, green: 111/255, blue: 15/255, alpha: 1)
         button.setTitle("로그인하기", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
-        button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
+    
+    private func setLayout() {
+        [titleLabel, idTextField, passwordTextField, loginButton].forEach {
+            self.addSubview($0)
+        }
+        
+        titleLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(161)
+            $0.width.equalTo(236)
+            $0.height.equalTo(44)
+        }
+        
+        idTextField.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(71)
+            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.height.equalTo(52)
+        }
+        
+        passwordTextField.snp.makeConstraints {
+            $0.top.equalTo(idTextField.snp.bottom).offset(7)
+            $0.horizontalEdges.equalTo(idTextField)
+            $0.height.equalTo(52)
+        }
+        
+        loginButton.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(35)
+            $0.horizontalEdges.equalTo(idTextField)
+            $0.height.equalTo(58)
+        }
+    }
+}
+
+
+final class LoginViewController_CustomView: UIViewController {
+    
+    private let rootView = LoginView()
+    
+    override func loadView() {
+        self.view = rootView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = .white
-        setLayout()
+        setTarget()
     }
     
-    private func setLayout() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach {
-            self.view.addSubview($0)
-        }
-        
-        titleLabel.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(161)
-            make.width.equalTo(236)
-            make.height.equalTo(44)
-        }
-        
-        idTextField.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(71)
-            make.left.right.equalToSuperview().inset(20)
-            make.height.equalTo(52)
-        }
-        
-        passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(idTextField.snp.bottom).offset(7)
-            make.left.right.equalTo(idTextField)
-            make.height.equalTo(52)
-        }
-        
-        loginButton.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextField.snp.bottom).offset(35)
-            make.left.right.equalTo(idTextField)
-            make.height.equalTo(58)
-        }
+    private func setTarget() {
+        rootView.loginButton.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
     }
     
-    
-    @objc
-    private func loginButtonDidTap() {
+    @objc private func loginButtonDidTap() {
         pushToWelcomeVC()
     }
     
     private func pushToWelcomeVC() {
         let welcomeViewController = WelcomeViewController()
-        welcomeViewController.setLabelText(id: idTextField.text)
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
 }
-
-

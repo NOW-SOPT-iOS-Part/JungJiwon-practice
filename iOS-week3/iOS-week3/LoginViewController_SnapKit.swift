@@ -1,11 +1,4 @@
 //
-//  WelcomeViewController_SnapKit.swift
-//  34th-Sopt-Seminar
-//
-//  Created by  정지원 on 2024/04/19.
-//
-
-//
 //  LoginViewController_SnapKit.swift
 //  iOS-week3
 //
