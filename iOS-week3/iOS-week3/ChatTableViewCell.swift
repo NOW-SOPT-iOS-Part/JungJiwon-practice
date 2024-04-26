@@ -34,7 +34,10 @@ class ChatTableViewCell: UITableViewCell {
             return label
         }()
         
-        private let itemImageView = UIImageView()
+        private let itemImageView : UIImageView = {
+            let imageView = UIImageView()
+            return imageView
+        }()
         
         override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
             super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -74,4 +77,14 @@ class ChatTableViewCell: UITableViewCell {
                 $0.size.equalTo(40)
             }
         }
+}
+
+extension ChatTableViewCell {
+    func dataBind(_ chatData: ChatModel) {
+        profileImageView.image = chatData.profileImg
+        nameLabel.text = chatData.name
+        placeLabel.text = chatData.place
+        chatLabel.text = chatData.message
+        itemImageView.image = chatData.itemImg
+    }
 }
