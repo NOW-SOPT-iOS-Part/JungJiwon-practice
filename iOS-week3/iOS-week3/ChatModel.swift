@@ -15,6 +15,7 @@ struct ChatModel {
 }
 
 extension ChatModel {
+
     static func dummy() -> [ChatModel] {
         return [
             ChatModel(profileImg: UIImage(named: "profile1")!, name: "류희재", place: "성북구", message: "땡큐", itemImg: UIImage(named: "product1")!),
