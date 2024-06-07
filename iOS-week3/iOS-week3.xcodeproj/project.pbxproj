@@ -11,7 +11,6 @@
 		87A187042BD3ACB300711132 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187032BD3ACB300711132 /* SceneDelegate.swift */; };
 		87A187062BD3ACB300711132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187052BD3ACB300711132 /* ViewController.swift */; };
 		87A187092BD3ACB300711132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A187072BD3ACB300711132 /* Main.storyboard */; };
-		87A1870B2BD3ACB400711132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A1870A2BD3ACB400711132 /* Assets.xcassets */; };
 		87A1870E2BD3ACB400711132 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A1870C2BD3ACB400711132 /* LaunchScreen.storyboard */; };
 		87A187192BD3ACB400711132 /* iOS_week3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187182BD3ACB400711132 /* iOS_week3Tests.swift */; };
 		87A187232BD3ACB400711132 /* iOS_week3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187222BD3ACB400711132 /* iOS_week3UITests.swift */; };
@@ -31,6 +30,11 @@
 		87A1874F2BDB8AEF00711132 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87A187472BDB8AEF00711132 /* Pretendard-ExtraLight.otf */; };
 		87A187502BDB8AEF00711132 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 87A187482BDB8AEF00711132 /* Pretendard-SemiBold.otf */; };
 		87A187522BDB915400711132 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187512BDB915400711132 /* ChatModel.swift */; };
+		87A187622BDB9D7D00711132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A187612BDB9D7D00711132 /* Assets.xcassets */; };
+		87A187A42BDC115E00711132 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187A32BDC115E00711132 /* ItemModel.swift */; };
+		87A187A62BDC117F00711132 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187A52BDC117F00711132 /* ItemCollectionViewCell.swift */; };
+		87A187A82BDC11C000711132 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A187A72BDC11C000711132 /* ItemViewController.swift */; };
+		87A187AB2BDCC52C00711132 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 87A187AA2BDCC52C00711132 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +60,6 @@
 		87A187032BD3ACB300711132 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		87A187052BD3ACB300711132 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		87A187082BD3ACB300711132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87A1870A2BD3ACB400711132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87A1870D2BD3ACB400711132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87A1870F2BD3ACB400711132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A187142BD3ACB400711132 /* iOS-week3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-week3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +81,10 @@
 		87A187472BDB8AEF00711132 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		87A187482BDB8AEF00711132 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		87A187512BDB915400711132 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		87A187612BDB9D7D00711132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../34th-Sopt-Seminar/34th-Sopt-Seminar/Assets.xcassets"; sourceTree = "<group>"; };
+		87A187A32BDC115E00711132 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		87A187A52BDC117F00711132 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		87A187A72BDC11C000711132 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A187AB2BDCC52C00711132 /* Moya in Frameworks */,
 				87A187372BDB75EC00711132 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,9 +139,12 @@
 			children = (
 				87A187012BD3ACB300711132 /* AppDelegate.swift */,
 				87A187032BD3ACB300711132 /* SceneDelegate.swift */,
+				87A187A32BDC115E00711132 /* ItemModel.swift */,
+				87A187A52BDC117F00711132 /* ItemCollectionViewCell.swift */,
+				87A187A72BDC11C000711132 /* ItemViewController.swift */,
 				87A187052BD3ACB300711132 /* ViewController.swift */,
 				87A187072BD3ACB300711132 /* Main.storyboard */,
-				87A1870A2BD3ACB400711132 /* Assets.xcassets */,
+				87A187612BDB9D7D00711132 /* Assets.xcassets */,
 				87A1870C2BD3ACB400711132 /* LaunchScreen.storyboard */,
 				87A1870F2BD3ACB400711132 /* Info.plist */,
 				87A187312BD3ACD800711132 /* LoginViewController_SnapKit.swift */,
@@ -197,6 +208,7 @@
 			name = "iOS-week3";
 			packageProductDependencies = (
 				87A187362BDB75EC00711132 /* SnapKit */,
+				87A187AA2BDCC52C00711132 /* Moya */,
 			);
 			productName = "iOS-week3";
 			productReference = 87A186FE2BD3ACB300711132 /* iOS-week3.app */;
@@ -272,6 +284,7 @@
 			mainGroup = 87A186F52BD3ACB300711132;
 			packageReferences = (
 				87A187352BDB75EC00711132 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				87A187A92BDCC52C00711132 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 87A186FF2BD3ACB300711132 /* Products */;
 			projectDirPath = "";
@@ -291,10 +304,10 @@
 			files = (
 				87A187502BDB8AEF00711132 /* Pretendard-SemiBold.otf in Resources */,
 				87A1870E2BD3ACB400711132 /* LaunchScreen.storyboard in Resources */,
+				87A187622BDB9D7D00711132 /* Assets.xcassets in Resources */,
 				87A187492BDB8AEF00711132 /* Pretendard-Regular.otf in Resources */,
 				87A1874F2BDB8AEF00711132 /* Pretendard-ExtraLight.otf in Resources */,
 				87A1874D2BDB8AEF00711132 /* Pretendard-ExtraBold.otf in Resources */,
-				87A1870B2BD3ACB400711132 /* Assets.xcassets in Resources */,
 				87A187092BD3ACB300711132 /* Main.storyboard in Resources */,
 				87A1874C2BDB8AEF00711132 /* Pretendard-Light.otf in Resources */,
 				87A1874A2BDB8AEF00711132 /* Pretendard-Black.otf in Resources */,
@@ -324,9 +337,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A187A42BDC115E00711132 /* ItemModel.swift in Sources */,
+				87A187A62BDC117F00711132 /* ItemCollectionViewCell.swift in Sources */,
 				87A187392BDB777200711132 /* WelcomeViewController_Snapkit.swift in Sources */,
 				87A187062BD3ACB300711132 /* ViewController.swift in Sources */,
 				87A187022BD3ACB300711132 /* AppDelegate.swift in Sources */,
+				87A187A82BDC11C000711132 /* ItemViewController.swift in Sources */,
 				87A1873B2BDB89BF00711132 /* ChatViewController.swift in Sources */,
 				87A187042BD3ACB300711132 /* SceneDelegate.swift in Sources */,
 				87A1873F2BDB8A3400711132 /* ChatTableViewCell.swift in Sources */,
@@ -684,6 +700,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		87A187A92BDCC52C00711132 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,6 +715,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 87A187352BDB75EC00711132 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		87A187AA2BDCC52C00711132 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 87A187A92BDCC52C00711132 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
