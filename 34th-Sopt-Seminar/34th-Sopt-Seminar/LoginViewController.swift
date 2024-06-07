@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SnapKit
 
 class LoginViewController: UIViewController {
     private let titleLabel: UILabel = {
@@ -54,6 +55,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         [titleLabel, idTextField, passwordTextField, loginButton].forEach{self.view.addSubview($0)}
+        
+        titleLabel.snp.makeConstraints {
+                $0.centerX.equalToSuperview()
+                $0.top.equalToSuperview().offset(161)
+            }
+            
+        loginButton.snp.makeConstraints {
+                $0.top.equalToSuperview().offset(217)
+                $0.leading.equalToSuperview().inset(20)
+                $0.trailing.equalToSuperview().inset(20)
+                $0.height.equalTo(58)
+            }
     }
     
     @objc func loginButtonDidTap() {
